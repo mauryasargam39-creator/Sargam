@@ -46,12 +46,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
-    }
-
-    .thumb img {
-      width: 100% !important;
-      height: auto;
-      object-fit: cover;
+      position: relative;
     }
 
     .brand {
@@ -72,24 +67,54 @@
       font-size: 18px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 20px;
+    nav {
+      display: flex;
+      gap: 14px;
     }
 
-    p.lead {
-      margin: 4px 0 0;
+    nav a {
       color: var(--muted);
-      font-size: 13px;
+      text-decoration: none;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--muted);
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .thumb img {
+      width: 100% !important;
+      height: auto;
+      object-fit: cover;
     }
 
     .hero-heading {
-      max-width: 100%;
-      padding-bottom: 20px;
-      font-family: Sentient, Georgia, sans-serif;
       font-size: 36px;
-      font-weight: 400;
+      font-family: Sentient, Georgia, sans-serif;
       line-height: 1.3em;
+      margin-bottom: 20px;
     }
 
     .hero {
@@ -222,31 +247,26 @@
       text-align: center;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-      .hero-heading {
-        font-size: 28px;
-      }
-
-      .avatar {
-        width: 48px;
-        height: 48px;
-        font-size: 16px;
-      }
-
-      .cta {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--card);
         flex-direction: column;
-        gap: 8px;
+        width: 200px;
+        padding: 12px;
+        border-radius: 8px;
+        display: none;
       }
 
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      header nav {
-        width: 100%;
+      nav.show {
         display: flex;
-        justify-content: space-around;
-        margin-top: 12px;
+      }
+
+      .hamburger {
+        display: flex;
       }
     }
 
@@ -282,10 +302,15 @@
           <p class="lead">Web Designer & UI/UX Designer</p>
         </div>
       </div>
-      <nav>
-        <a href="#work" style="color:var(--muted);text-decoration:none">Work</a>
-        <a href="#about" style="color:var(--muted);text-decoration:none">About</a>
-        <a href="#contact" style="color:var(--muted);text-decoration:none">Contact</a>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="mobile-nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -293,9 +318,7 @@
       <section class="hero">
         <div class="intro">
           <h1 class="hero-heading">Hi — I’m <strong>Sargam Maurya</strong></h1>
-          <p class="hero-heading">I craft engaging web and mobile experiences. With hands-on experience in
-            e-commerce,
-            corporate websites, and apps, I specialize in delivering responsive, user-centric designs.</p>
+          <p class="hero-heading">I craft engaging web and mobile experiences...</p>
           <div class="roles">
             <span class="pill">Figma</span>
             <span class="pill">Adobe Suite</span>
@@ -321,7 +344,7 @@
 
       <section id="work" class="projects">
         <h2 style="margin:6px 0 12px">Selected Work</h2>
-       <div class="projects-grid">
+         <div class="projects-grid">
                     <article class="card">
                         <div class="thumb">
                             <img src="/img/image1.png" alt="Financial services platform" />
@@ -376,6 +399,8 @@
                                 Project</a></p>
                     </article>
 
+                    
+
                     <article class="card">
                         <div class="thumb"><img src="/img/finefrag.png" alt="Financial services platform" /></div>
                         <h3 class="text-white">finefrag.com</h3>
@@ -411,8 +436,17 @@
       </footer>
     </main>
   </div>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
-
-
