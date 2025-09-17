@@ -2,446 +2,357 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sargam Maurya — Web Designer & UI/UX Designer</title>
-    <meta name="description" content="Portfolio — Sargam Maurya | Web Design, UI/UX, Case Studies, Prototypes" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sargam Maurya — Web Designer & UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio — Sargam Maurya | Web Design, UI/UX, Case Studies, Prototypes" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --muted: #9aa4b2;
-            --accent: #6ee7b7;
-            --glass: rgba(255, 255, 255, 0.04);
-            --max-w: 1100px;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        }
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #6ee7b7;
+      --glass: rgba(255, 255, 255, 0.04);
+      --max-w: 1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
 
-        * {
-            box-sizing: border-box
-        }
+    * {
+      box-sizing: border-box
+    }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            background: linear-gradient(180deg, #07101a 0%, #07111a 70%);
-            color: #e6eef6
-        }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, #07101a 0%, #07111a 70%);
+      color: #e6eef6;
+      scroll-behavior: smooth;
+    }
 
-        .wrap {
-            max-width: var(--max-w);
-            margin: 48px auto;
-            padding: 24px
-        }
+    .wrap {
+      max-width: var(--max-w);
+      margin: 48px auto;
+      padding: 24px;
+    }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px
-        }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        .thumb img {
-            width: 100% !important;
-        }
+    .thumb img {
+      width: 100% !important;
+      height: auto;
+      object-fit: cover;
+    }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-        .avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--accent), #60a5fa);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700
-        }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 20px
-        }
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
 
-        p.lead {
-            margin: 4px 0 0;
-            color: var(--muted);
-            font-size: 13px
-        }
+    p.lead {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-        .hero-heading {
-            max-width: 1200px;
-            padding-bottom: 30px;
-            font-family: Sentient, Georgia, sans-serif;
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 1.2em;
-        }
+    .hero-heading {
+      max-width: 100%;
+      padding-bottom: 20px;
+      font-family: Sentient, Georgia, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.3em;
+    }
 
-        .hero {
-            margin-top: 28px;
-            align-items: start
-        }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      margin-top: 28px;
+      gap: 24px;
+    }
 
-        .intro {
-            padding: 26px;
-            background: var(--card);
-            border-radius: 14px;
-            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6)
-        }
+    .intro {
+      padding: 20px;
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+    }
 
-        .intro h2 {
-            margin: 0 0 8px;
-            font-size: 28px
-        }
+    .roles {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
 
-        .roles {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin: 12px 0
-        }
+    .pill {
+      background: var(--glass);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-        .pill {
-            background: var(--glass);
-            padding: 6px 10px;
-            border-radius: 999px;
-            color: var(--muted);
-            font-size: 13px
-        }
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
 
-        .cta {
-            display: flex;
-            gap: 12px;
-            margin-top: 16px
-        }
+    .btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #22c55e, #06b6d4);
+      color: #04201a;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-align: center;
+    }
 
-        .btn {
-            padding: 10px 14px;
-            border-radius: 10px;
-            background: linear-gradient(90deg, #22c55e, #06b6d4);
-            color: #04201a;
-            border: none;
-            cursor: pointer;
-            font-weight: 600
-        }
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--accent);
+    }
 
-        .btn.ghost {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            color: var(--accent)
-        }
+    .hero-image {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      padding: 18px;
+      border-radius: 14px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-        .hero-image {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-            padding: 18px;
-            border-radius: 14px;
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px
-        }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-        .hero-image img {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-            flex-shrink: 0
-        }
+    section.projects {
+      margin-top: 28px;
+    }
 
-        .meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--muted);
-            font-size: 13px
-        }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
 
-        section.projects {
-            margin-top: 28px
-        }
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      display: flex;
+      flex-direction: column;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px
-        }
+    .thumb {
+      height: 140px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #0b1220, #071427);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+      overflow: hidden;
+    }
 
-        .card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            padding: 14px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.03)
-        }
+    .two-col {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 28px;
+    }
 
-        .thumb {
-            height: 140px;
-            border-radius: 8px;
-            background: linear-gradient(90deg, #0b1220, #071427);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            font-size: 13px
-        }
+    .about,
+    .contact {
+      padding: 18px;
+      border-radius: 12px;
+    }
 
-        .card h3 {
-            margin: 12px 0 6px;
-            font-size: 16px
-        }
+    .about {
+      background: var(--card);
+    }
 
-        .card p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 13px
-        }
+    .contact {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    }
 
-        .card .tags {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-            flex-wrap: wrap
-        }
+    footer {
+      margin: 28px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
 
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 18px;
-            margin-top: 28px
-        }
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 28px;
+      }
 
-        .about {
-            padding: 18px;
-            background: var(--card);
-            border-radius: 12px
-        }
+      .avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+      }
 
-        .contact {
-            padding: 18px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            border-radius: 12px
-        }
+      .cta {
+        flex-direction: column;
+        gap: 8px;
+      }
 
-        footer {
-            margin: 28px 0;
-            color: var(--muted);
-            font-size: 13px;
-            text-align: center
-        }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
 
-        @media (max-width:1000px) {
-            .hero {
-                grid-template-columns: 1fr
-            }
+      header nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 12px;
+      }
+    }
 
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr)
-            }
+    @media (max-width: 480px) {
+      .hero-heading {
+        font-size: 22px;
+      }
 
-            .two-col {
-                grid-template-columns: 1fr
-            }
-        }
+      .wrap {
+        padding: 12px;
+        margin: 12px;
+      }
 
-        @media (max-width:640px) {
-            .projects-grid {
-                grid-template-columns: 1fr
-            }
+      .cta .btn {
+        width: 100%;
+      }
 
-            .wrap {
-                padding: 12px;
-                margin: 16px
-            }
-
-            .brand h1 {
-                font-size: 16px
-            }
-        }
-    </style>
+      .roles .pill {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <div class="brand">
-                <div class="avatar">SM</div>
-                <div>
-                    <h1>Sargam Maurya</h1>
-                    <p class="lead">Web Designer & UI/UX Designer</p>
-                </div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">SM</div>
+        <div>
+          <h1>Sargam Maurya</h1>
+          <p class="lead">Web Designer & UI/UX Designer</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#work" style="color:var(--muted);text-decoration:none">Work</a>
+        <a href="#about" style="color:var(--muted);text-decoration:none">About</a>
+        <a href="#contact" style="color:var(--muted);text-decoration:none">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h1 class="hero-heading">Hi — I’m <strong>Sargam Maurya</strong></h1>
+          <p class="hero-heading">I craft engaging web and mobile experiences. With hands-on experience in
+            e-commerce,
+            corporate websites, and apps, I specialize in delivering responsive, user-centric designs.</p>
+          <div class="roles">
+            <span class="pill">Figma</span>
+            <span class="pill">Adobe Suite</span>
+            <span class="pill">Wireframes</span>
+            <span class="pill">Prototypes</span>
+            <span class="pill">HTML/CSS/JS</span>
+          </div>
+          <div class="cta">
+            <button class="btn" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View
+              Work</button>
+            <a class="btn ghost" href="#contact">Hire Me</a>
+          </div>
+        </div>
+
+        <aside class="hero-image">
+          <img src="/img/home-banner.png" alt="project screenshot" />
+          <div class="meta">
+            <div>Featured Project</div>
+            <div>Case Study • 2025</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="work" class="projects">
+        <h2 style="margin:6px 0 12px">Selected Work</h2>
+        <div class="projects-grid">
+          <!-- Example Project -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img/image1.png" alt="Financial services platform" />
             </div>
-            <nav>
-                <a href="#work" style="color:var(--muted);margin-right:14px;text-decoration:none">Work</a>
-                <a href="#about" style="color:var(--muted);margin-right:14px;text-decoration:none">About</a>
-                <a href="#contact" style="color:var(--muted);text-decoration:none">Contact</a>
-            </nav>
-        </header>
+            <h3 class="text-white">Credility Website & Portals</h3>
+            <p>Designed responsive dashboards and user flows for financial services platforms (Laravel +
+              Bootstrap).</p>
+            <p><a href="https://credility.com" target="_blank" style="color:var(--accent)">View Project</a></p>
+          </article>
+        </div>
+      </section>
 
-        <main>
-            <section class="hero">
-                <div class="intro">
-                    <h1 class="hero-heading">Hi — I’m <strong>Sargam Maurya</strong></h1>
-                    <p class="hero-heading">I craft engaging web and mobile experiences. With hands-on experience in
-                        e-commerce,
-                        corporate websites, and apps, I specialize in delivering responsive, user-centric designs.</p>
-                    <div class="roles">
-                        <span class="pill">Figma</span>
-                        <span class="pill">Adobe Suite</span>
-                        <span class="pill">Wireframes</span>
-                        <span class="pill">Prototypes</span>
-                        <span class="pill">HTML/CSS/JS</span>
-                    </div>
-                    <div class="cta">
-                        <button class="btn"
-                            onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View
-                            Work</button>
-                        <a class="btn ghost" href="#contact">Hire Me</a>
-                    </div>
-                </div>
+      <section class="two-col">
+        <div id="about" class="about">
+          <h3>About Me</h3>
+          <p style="color:var(--muted)">I am a Web Designer and UI/UX Designer with 3+ years of professional
+            experience...</p>
+        </div>
 
-                <aside class="hero-image">
-                    <img src="/img/home-banner.png"
-                        alt="project screenshot" />
-                    <div class="meta">
-                        <div>Featured Project</div>
-                        <div>Case Study • 2025</div>
-                    </div>
-                </aside>
-            </section>
+        <aside id="contact" class="contact">
+          <h3>Contact</h3>
+          <p style="color:var(--muted)">Let’s collaborate! I am open to freelance or full-time opportunities...</p>
+        </aside>
+      </section>
 
-            <section id="work" class="projects">
-                <h2 style="margin:6px 0 12px">Selected Work</h2>
-                <div class="projects-grid">
-                    <article class="card">
-                        <div class="thumb">
-                            <img src="/img/image1.png" alt="Financial services platform" />
-                        </div>
-                        <h3 class="text-white">Credility Website & Portals</h3>
-                        <p>Designed responsive dashboards and user flows for financial services platforms (Laravel +
-                            Bootstrap).</p>
-                        <p><a href="https://credility.com" target="_blank" style="color:var(--accent)">View Project</a>
-                        </p>
-                    </article>
-                    <article class="card">
-                        <div class="thumb"><img src="/img/namrata.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">Namrata Ramola Branding Solutions</h3>
-                        <p><a href="https://brandingssolutions.com/" target="_blank" style="color:var(--accent)">View
-                                Project</a>Worked on Angular/Ionic apps with enhanced onboarding and user assistance
-                            features.</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/beyoutiful.png"
-                                alt="Financial services platform" /></div>
-                        <h3 class="text-white">BeYoutiful by Archie</h3>
-                        <p>Web design and branding for beauty services.</p>
-                        <p><a href="https://beyoutifulbyarchie.com/" target="_blank" style="color:var(--accent)">View
-                                Project</a></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/madeofmilk.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">madeofmilk.in</h3>
-                        <p><a href="https://www.madeofmilk.in/" target="_blank" style="color:var(--accent)">View
-                                Project</a></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/mecard.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">mecard.me</h3>
-                        <p><a href="https://mecard.me/" target="_blank" style="color:var(--accent)">View Project</a></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/illusionbrand.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">illusionsbrand.com</h3>
-                        <p><a href="https://www.illusionsbrand.com/" target="_blank" style="color:var(--accent)">View
-                                Project</a></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/flagcompany.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">theflagcompany.in</h3>
-                        <p><a href="https://theflagcompany.in/" target="_blank" style="color:var(--accent)">View
-                                Project</a></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/finefrag.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">finefrag.com</h3>
-                        <p><a href="https://finefrag.com/" target="_blank" style="color:var(--accent)">View Project</a>
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <div class="thumb"><img src="/img/seherflag.png" alt="Financial services platform" /></div>
-                        <h3 class="text-white">seherflags.com</h3>
-                        <p><a href="https://seherflags.com/" target="_blank" style="color:var(--accent)">View
-                                Project</a></p>
-                    </article>
-
-                </div>
-            </section>
-
-            <section class="two-col">
-                <div id="about" class="about">
-                    <h3>About Me</h3>
-                    <p style="color:var(--muted)">I am a Web Designer and UI/UX Designer with 3+ years of professional
-                        experience. I have worked on a variety of projects across e-commerce, corporate websites, SaaS
-                        dashboards, and mobile applications. I am currently pursuing my MBA in IT Project Management,
-                        combining technical expertise with strategic project skills.</p>
-
-                    <h4 style="margin-top:14px">Process</h4>
-                    <ol style="color:var(--muted)">
-                        <li>Research & discovery — competitor audit, interviews, analytics</li>
-                        <li>Wireframes & flows — structure and user journeys</li>
-                        <li>High-fi design — pixel perfect UI in Figma & Adobe tools</li>
-                        <li>Handoff & testing — collaboration with developers, QA, and iterations</li>
-                    </ol>
-
-                    <h4 style="margin-top:14px">Tools</h4>
-                    <div class="roles">
-                        <span class="pill">Figma</span>
-                        <span class="pill">Photoshop</span>
-                        <span class="pill">CorelDRAW</span>
-                        <span class="pill">WordPress</span>
-                        <span class="pill">Laravel/Bootstrap</span>
-                    </div>
-                </div>
-
-                <aside id="contact" class="contact">
-                    <h3>Contact</h3>
-                    <p style="color:var(--muted)">Let’s collaborate! I am open to freelance or full-time opportunities
-                        in web design and UI/UX.</p>
-                    <p style="margin-top:8px"><strong>Email</strong><br /><a href="mailto:mauryasargam39@gmail.com"
-                            style="color:var(--accent);text-decoration:none">mauryasargam39@gmail.com</a></p>
-                    <p style="margin-top:8px"><strong>Phone</strong><br />+91-9152725961</p>
-                    <p style="margin-top:8px"><strong>Connect</strong><br />
-                        <a href="#" style="color:var(--muted);text-decoration:none;margin-right:8px">LinkedIn</a>
-                        <a href="#" style="color:var(--muted);text-decoration:none;margin-right:8px">Behance</a>
-                        <a href="#" style="color:var(--muted);text-decoration:none">Dribbble</a>
-                    </p>
-                    <div style="margin-top:12px">
-                        <a class="btn" href="/Sargam-resume.pdf" target="_blank">Download Résumé</a>
-                    </div>
-                </aside>
-            </section>
-
-            <footer>
-                © Sargam Maurya — Web Design & UI/UX • Built with ❤️
-            </footer>
-        </main>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+      <footer>
+        © Sargam Maurya — Web Design & UI/UX • Built with ❤️
+      </footer>
+    </main>
+  </div>
 </body>
 
 </html>
-
